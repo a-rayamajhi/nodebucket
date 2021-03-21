@@ -1,3 +1,12 @@
+/**
+ * Title: base-response.js
+ * Author: Professor Krasso
+ * Date: 21 March 2021
+ * Modified By:  Anil Rayamajhi
+ * Description: BaseResponse Class to encapsulate the logic
+ * to return response code, message, data and timestamp
+ */
+
 class BaseResponse {
   /**
    *
@@ -9,7 +18,7 @@ class BaseResponse {
     this.httpCode = httpCode;
     this.message = message;
     this.data = data;
-    this.timestamp = new Date().toLocaleDateString('en-US');
+    this.timestamp = new Date().toLocaleDateString("en-US");
   }
 
   /**
@@ -18,12 +27,12 @@ class BaseResponse {
    */
   toObject() {
     return {
-      "httpCode": this.httpCode,
-      "message": this.message,
-      'data': this.data,
-      "timestamp": this.timestamp
-    }
+      httpCode: this.httpCode,
+      message: this.message,
+      data: this.data,
+      timestamp: this.timestamp,
+    };
   }
 }
 
-module.exports = BaseResponse
+module.exports = BaseResponse;

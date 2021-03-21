@@ -1,0 +1,22 @@
+/* login page style to align content to center
+adjust paper width and gutters */
+.login-container {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.login-subtitle {
+  text-align: center;
+}
+
+.login-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+.form-full-width {
+  width: 100%;
+  padding: 20px 0;
+}

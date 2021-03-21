@@ -1,3 +1,11 @@
+/**
+ * Title: app.module.ts
+ * Author: Professor Krasso
+ * Date: 21 March 2021
+ * Modified By:  Anil Rayamajhi
+ * Description: App Module
+ */
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -17,7 +25,11 @@ import { LoginComponent } from './pages/login/login.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+/**
+ * Wire Routing Module and Components
+ */
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +52,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatCardModule,
     MatInputModule,
     MatFormFieldModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

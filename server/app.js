@@ -1,4 +1,12 @@
 /**
+ * Title: app.js
+ * Author: Professor Krasso
+ * Date: 21 March 2021
+ * Modified By:  Anil Rayamajhi
+ * Description: App Server
+ */
+
+/**
  * Require statements
  */
 const express = require("express");
@@ -9,7 +17,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const mongoose = require("mongoose");
 
-const EmployeeAPI = require("./routes/employee-route")
+const EmployeeAPI = require("./routes/employee-route");
 
 /**
  * App configurations
@@ -26,7 +34,7 @@ app.use("/", express.static(path.join(__dirname, "../dist/nodebucket")));
  */
 const port = process.env.PORT || 3000; // server port
 
-// TODO: This line will need to be replaced with your actual database connection string
+// Database connection string
 const conn =
   "mongodb+srv://nodebucket_user:admin@ems.nvxn7.mongodb.net/nodebucket?retryWrites=true&w=majority";
 
@@ -50,8 +58,7 @@ mongoose
 /**
  * API(s) go here...
  */
-app.use('/api/employees', EmployeeAPI)
-
+app.use("/api/employees", EmployeeAPI);
 
 /**
  * Create and start server
