@@ -28,16 +28,16 @@ router.get("/:empId", async (req, res) => {
           500,
           `MongoDB Native error ${err}`
         );
-        res.status(500).send(mongoDBErrorResponse.toObject());
+        res.status(500).json(mongoDBErrorResponse.toObject());
+      } else {
+        console.log(employee);
+        const employeeResponse = new BaseResponse(
+          200,
+          "Successful query",
+          employee
+        );
+        res.status(200).json(employeeResponse.toObject());
       }
-
-      console.log(employee);
-      const employeeResponse = new BaseResponse(
-        200,
-        "Successful query",
-        employee
-      );
-      res.status(200).send(employeeResponse.toObject());
     });
   } catch (e) {
     console.log(e);
