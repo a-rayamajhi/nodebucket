@@ -17,6 +17,7 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class BaseLayoutComponent implements OnInit {
   year: number = Date.now();
+  loggedInEmployeeId: string = null;
 
   /**
    *
@@ -25,7 +26,10 @@ export class BaseLayoutComponent implements OnInit {
    */
   constructor(private router: Router, private cookieService: CookieService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // show employeeId in appbar
+    this.loggedInEmployeeId = this.cookieService.get('session_user');
+  }
 
   /**
    * logOut(): delete session_user cookie and redirect to login page
