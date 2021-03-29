@@ -6,11 +6,21 @@
 
 .navbar-container {
   padding: 5px;
+  width: 100%;
 }
 
 .navbar-link {
   font-size: 20px;
   font-weight: lighter;
+}
+
+.employee-id {
+  float: right;
+}
+
+.employee-id > span {
+  font-size: medium;
+  padding-right: 1rem;
 }
 
 .main-content {

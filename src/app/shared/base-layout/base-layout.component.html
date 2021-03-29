@@ -9,9 +9,13 @@
 
         <button class="navbar-link" routerLink="/" mat-button>Home</button>
         <button class="navbar-link" mat-button>About</button>
-        <button class="navbar-link" mat-button (click)="logOut()">
-          Log Out
-        </button>
+
+        <div class="navbar-link employee-id">
+          <span>EmployeeId {{ loggedInEmployeeId }}</span>
+          <button class="navbar-link" mat-button (click)="logOut()">
+            Log Out
+          </button>
+        </div>
       </div>
     </mat-toolbar>
   </nav>
