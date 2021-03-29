@@ -1,7 +1,7 @@
 /**
  * Title: base-layout.component.ts
  * Author: Professor Krasso
- * Date: 21 March 2021
+ * Date: 28 March 2021
  * Modified By:  Anil Rayamajhi
  * Description: Base Layout component
  */
@@ -27,7 +27,7 @@ export class BaseLayoutComponent implements OnInit {
   constructor(private router: Router, private cookieService: CookieService) {}
 
   ngOnInit(): void {
-    // show employeeId in appbar
+    // show employeeId in app bar
     this.loggedInEmployeeId = this.cookieService.get('session_user');
   }
 
