@@ -1,9 +1,9 @@
 /**
  * Title: app.module.ts
  * Author: Professor Krasso
- * Date: 21 March 2021
+ * Date: 3 Apr 2021
  * Modified By:  Anil Rayamajhi
- * Description: App Module
+ * Description: App Module, Import vendor modules
  */
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -26,6 +26,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CreateTaskDialogComponent } from './shared/create-task-dialog/create-task-dialog.component';
 
 /**
  * Wire Routing Module and Components
@@ -37,6 +41,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     BaseLayoutComponent,
     AuthLayoutComponent,
     LoginComponent,
+    CreateTaskDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +58,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatInputModule,
     MatFormFieldModule,
     MatSnackBarModule,
+    DragDropModule,
+    MatMenuModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
