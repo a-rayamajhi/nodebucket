@@ -1,0 +1,6 @@
+/* Style to adjust profile picture
+in bootstrap grid */
+.profile-pic {
+  max-width: 100%;
+  max-height: 370px;
+}

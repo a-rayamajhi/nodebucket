@@ -1,20 +1,19 @@
+<!-- logo -->
+<div class="app-title">
+  <span routerLink="/">nodebucket</span>
+</div>
+
 <div fxLayout="column">
   <!-- navigation -->
   <nav fxFlex>
     <mat-toolbar>
       <!-- navbar container -->
       <div class="navbar-container">
-        <!-- logo -->
-        <button class="logo" routerLink="/" mat-button>nodebucket</button>
+        <button routerLink="/" mat-button>HOME</button>
+        <button routerLink="/about" mat-button>ABOUT US</button>
 
-        <button class="navbar-link" routerLink="/" mat-button>Home</button>
-        <button class="navbar-link" mat-button>About</button>
-
-        <div class="navbar-link employee-id">
-          <span>EmployeeId {{ loggedInEmployeeId }}</span>
-          <button class="navbar-link" mat-button (click)="logOut()">
-            Log Out
-          </button>
+        <div class="employee-id">
+          <button mat-button (click)="logOut()">SIGN OUT</button>
         </div>
       </div>
     </mat-toolbar>
@@ -27,7 +26,50 @@
     </main>
   </div>
 
-  <!-- footer -->
+  <!-- Footer -->
+  <div fxLayout="row wrap" class="footer">
+    <div fxFlex="100%" fxFlex.gt-sm="55%">
+      <div class="footer-tile">
+        <div class="about-title">NODEBUCKET</div>
+        <div class="about-content">
+          Welcome to the quickest and easiest computer repair service in Los
+          Angeles. Our experienced professionals will diagnose your problems
+          free of charge. Just bring it in to our shop location. We are located
+          @ 1000 Galvin Rd S, Bellevue, NE 68005 90230 with dedicated parking.
+          We have been servicing this community for over 17 yrs. Providing the
+          best and most cost effective solution to all your computer and
+          networking needs. With Quick N Easy Computer Repair services have
+          become personal again.
+        </div>
+      </div>
+    </div>
+    <div fxFlex="100%" fxFlex.gt-sm="20%"></div>
+    <div fxFlex="100%" fxFlex.gt-sm="25%">
+      <div class="footer-tile">
+        <div class="about-title padding-left-2">CONTACT US</div>
+        <div class="about-content">
+          <div class="content-wrapper">
+            <mat-icon color="secondary">chevron_right</mat-icon>
+            <div>support@bobcomputers.com</div>
+          </div>
+          <div class="content-wrapper">
+            <mat-icon color="secondary">chevron_right</mat-icon>
+            <div>(402) 293-2000</div>
+          </div>
+          <br /><br />
+          <div class="content-wrapper">
+            <div>
+              <div>1000 Galvin Rd S</div>
+              <div>Bellevue, NE 68005</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
   <div fxFlex>
     <footer class="footer">
       <mat-toolbar class="footer-content">
@@ -40,4 +82,4 @@
       </mat-toolbar>
     </footer>
   </div>
-</div>
+</div> -->
