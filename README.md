@@ -41,3 +41,5 @@ Class Link: https://github.com/buwebdev/web-450
 Generate component in specific dir `ng g c pages/login`
 
 Generate Auth guard in shared dir `ng g g shared/auth`
+
+Generate Task Service in shared dir `ng g s shared/task`

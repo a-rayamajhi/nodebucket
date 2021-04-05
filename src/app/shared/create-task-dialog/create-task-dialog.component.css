@@ -1,0 +1,9 @@
+/* Create task dialog field spacing and width */
+.mat-dialog-content {
+  padding: 2rem;
+  width: 100%;
+}
+
+.mat-form-field {
+  width: 70%;
+}

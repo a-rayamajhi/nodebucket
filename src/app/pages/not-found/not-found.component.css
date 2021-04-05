@@ -1,0 +1,20 @@
+/* non found component with 404 status and redirect to home button */
+.not-found-wrapper {
+  display: flex;
+  height: 40vh;
+  align-items: center;
+  justify-content: center;
+}
+.status-code {
+  font-size: 4rem;
+  padding-right: 2rem;
+  border-right: 3px solid #212121;
+}
+
+.content {
+  padding-left: 2rem;
+}
+
+.content > .message {
+  padding-bottom: 0.7rem;
+}

@@ -13,12 +13,24 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthLayoutComponent } from './shared/auth-layout/auth-layout.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './shared/auth.guard';
+import { AboutComponent } from './pages/about/about.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 /**
  * Routes Declaration
  * Wire with Respective Components
  */
 const routes: Routes = [
+  {
+    path: 'session',
+    component: AuthLayoutComponent,
+    children: [
+      {
+        path: 'login',
+        component: LoginComponent,
+      },
+    ],
+  },
   {
     path: '',
     component: BaseLayoutComponent,
@@ -28,15 +40,15 @@ const routes: Routes = [
         component: HomeComponent,
         canActivate: [AuthGuard],
       },
-    ],
-  },
-  {
-    path: 'session',
-    component: AuthLayoutComponent,
-    children: [
       {
-        path: 'login',
-        component: LoginComponent,
+        path: 'about',
+        component: AboutComponent,
+        canActivate: [AuthGuard],
+      },
+      {
+        path: '**',
+        component: NotFoundComponent,
+        canActivate: [AuthGuard],
       },
     ],
   },
