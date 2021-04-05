@@ -1,4 +1,4 @@
-// non found component with 404 status and redirect to home button
+/* non found component with 404 status and redirect to home button */
 .not-found-wrapper {
   display: flex;
   height: 40vh;
@@ -13,8 +13,8 @@
 
 .content {
   padding-left: 2rem;
+}
 
-  .message {
-    padding-bottom: 0.7rem;
-  }
+.content > .message {
+  padding-bottom: 0.7rem;
 }

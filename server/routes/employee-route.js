@@ -254,7 +254,7 @@ router.delete("/:empId/tasks/:taskId", async (req, res) => {
           );
 
           if (todoItem) {
-            console.log(todoItem);
+            console.log('TODO Item', todoItem);
             employee.todo.id(todoItem._id).remove();
             employee.save(function (err, updatedTodoItemEmployee) {
               if (err) {
@@ -275,8 +275,8 @@ router.delete("/:empId/tasks/:taskId", async (req, res) => {
               }
             });
           } else if (doneItem) {
-            console.log(doneItem);
-            employee.todo.id(doneItem._id).remove();
+            console.log('Done Item', doneItem);
+            employee.done.id(doneItem._id).remove();
             employee.save(function (err, updatedDoneItemEmployee) {
               if (err) {
                 console.log(err);

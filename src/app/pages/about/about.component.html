@@ -1,18 +1,7 @@
 <!-- About Component -->
-<div class="h4">{{ artist }}</div>
-<hr />
-<div class="row">
-  <div class="col-sm-4">
-    <img class="profile-pic" src="{{ profilePicture }}" alt="profile picture" />
-  </div>
-  <div class="col-sm-8">
+
+<div fxLayout="row wrap" class="about-content">
+  <div fxFlex="100%" fxFlex.gt-sm="70%">
     {{ description }}
-    <span class="inline-citation">
-      <a
-        href="https://www.rollingstone.com/interactive/lists-100-greatest-songwriters/#bob-dylan"
-        target="_blank"
-        >Source</a
-      >
-    </span>
   </div>
 </div>

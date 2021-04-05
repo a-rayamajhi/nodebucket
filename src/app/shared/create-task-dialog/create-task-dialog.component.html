@@ -1,13 +1,15 @@
 <h2 mat-dialog-title>Add new task</h2>
+<hr />
 <!-- Form Group with submit on enter -->
-<mat-dialog-content [formGroup]="taskForm">
-  <mat-form-field>
+<mat-dialog-content [formGroup]="taskForm" class="mat-dialog-content">
+  <mat-form-field class="mat-form-field">
     <input
       type="text"
       matInput
       placeholder="Enter a task name"
       formControlName="text"
       (keydown.enter)="createTask()"
+      class="full-width"
     />
   </mat-form-field>
 </mat-dialog-content>

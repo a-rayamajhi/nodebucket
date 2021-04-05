@@ -30,13 +30,14 @@
   float: right;
 }
 
+/* dynamic height  */
 .main-content {
   padding-left: 30px;
+  min-height: calc(100vh - 514px);
 }
 
 .footer {
   bottom: 0;
-  position: absolute;
   width: 100%;
 }
 

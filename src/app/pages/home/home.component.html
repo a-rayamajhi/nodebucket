@@ -1,7 +1,7 @@
 <!-- Landing page component -->
 <div fxLayout="column" class="main-welcome">
   <!-- title -->
-  <div fxFlex>
+  <!-- <div fxFlex>
     <h1 class="title">
       Welcome to WEB 450's - nodebucket Project <br />
       <span class="subtitle">
@@ -10,15 +10,16 @@
         begin working on each item.
       </span>
     </h1>
-  </div>
+  </div> -->
   <!-- end fxFlex -->
 
   <!-- create task -->
   <div fxFlex>
-    <div fxLayout="column" class="task-container">
+    <div fxLayout="column" class="create-task">
       <button
-        mat-raised-button
+        mat-stroked-button
         color="primary"
+        class="create-task-btn"
         (click)="openCreateTaskDialog()"
       >
         Create Task
@@ -51,7 +52,12 @@
                     <div fxLayout="row">
                       <!-- task name -->
                       <div fxFlex>
-                        {{ item.text }}
+                        <div>
+                          {{ item.text }}
+                        </div>
+                        <div class="story-id">
+                          NB-{{ item._id.slice(-4).toUpperCase() }}
+                        </div>
                       </div>
                       <!-- end of task name -->
 
@@ -106,7 +112,12 @@
                     <div fxLayout="row">
                       <!-- task name -->
                       <div fxFlex>
-                        {{ item.text }}
+                        <div>
+                          {{ item.text }}
+                        </div>
+                        <div class="story-id">
+                          NB-{{ item._id.slice(-4).toUpperCase() }}
+                        </div>
                       </div>
                       <!-- end of task name -->
 

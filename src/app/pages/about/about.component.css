@@ -1,6 +1,4 @@
-/* Style to adjust profile picture
-in bootstrap grid */
-.profile-pic {
-  max-width: 100%;
-  max-height: 370px;
+/* content gutter */
+.about-content {
+  padding: 5rem 2rem;
 }

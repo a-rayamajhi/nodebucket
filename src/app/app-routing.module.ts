@@ -22,6 +22,16 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
  */
 const routes: Routes = [
   {
+    path: 'session',
+    component: AuthLayoutComponent,
+    children: [
+      {
+        path: 'login',
+        component: LoginComponent,
+      },
+    ],
+  },
+  {
     path: '',
     component: BaseLayoutComponent,
     children: [
@@ -38,16 +48,7 @@ const routes: Routes = [
       {
         path: '**',
         component: NotFoundComponent,
-      },
-    ],
-  },
-  {
-    path: 'session',
-    component: AuthLayoutComponent,
-    children: [
-      {
-        path: 'login',
-        component: LoginComponent,
+        canActivate: [AuthGuard],
       },
     ],
   },

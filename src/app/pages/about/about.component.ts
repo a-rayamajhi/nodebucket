@@ -1,7 +1,7 @@
 /**
  * Title: about.component.ts
  * Author: Professor Krasso
- * Date: 10 Jan 2021
+ * Date: 4 Apr 2021
  * Modified By:  Anil Rayamajhi
  * Description: About Component
  */
@@ -18,13 +18,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
   // About component payload
-  artist: string  = 'Bob Dylan';
-  description: string = `Dylan's vision of American popular music was transformative. No one set the
-  bar higher, or had greater impact. "You want to write songs that are bigger
-  than life," he wrote in his memoir, Chronicles. "You want to say something
-  about strange things that have happened to you, strange things you have
-  seen."`;
-  profilePicture: string = 'http://cdn.rollingstone.com/feature/100-best-song-writers/images/dylan-bob-lead-505.jpg';
+  description: string =
+    'nodebucket is built for every member of your software team to plan, track, and release great software.Create user stories and issues, plan sprints, and distribute tasks across your software team. Prioritize and discuss your team’s work in full context with complete visibility. Improve team performance based on visual data that your team can put to use.';
 
   ngOnInit(): void {}
 }

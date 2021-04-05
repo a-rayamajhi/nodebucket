@@ -34,7 +34,18 @@
 
 .task-container {
   width: 70%;
+  margin: 1rem auto 4rem;
+}
+
+.create-task {
+  width: 70%;
   margin: 1rem auto;
+}
+
+/* Create task Button Style */
+.create-task-btn {
+  width: 150px;
+  height: 50px;
 }
 
 .task-list {
@@ -53,4 +64,10 @@
   font-size: 14px;
   box-sizing: border-box;
   justify-content: space-between;
+}
+
+.story-id {
+  font-size: 0.8em;
+  font-weight: 700;
+  margin-top: 7px;
 }
